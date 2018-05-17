@@ -75,6 +75,8 @@ var self = module.exports = {
     },
     joinedPlayer: function (playerName, socket, socketid) {
         playerHandler.createPlayer(playerName, socket, socketid);
+        console.log("numberOfPlayers:" + Object.keys((boardData.players)).length);
+        console.log(boardData.players);
     },
     removePlayer: function (playerId) {
         boardData.players[playerId].socket.disconnect(true);
